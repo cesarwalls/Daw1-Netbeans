@@ -6,6 +6,7 @@
 package hospital;
 
 import java.util.ArrayList;
+import java.util.TreeSet;
 
 /**
  *
@@ -13,9 +14,11 @@ import java.util.ArrayList;
  */
 public class Hospital {
     protected ArrayList<Medico> medicos;
-    
-    public Hospital(ArrayList<Medico> medicos) {
+    protected TreeSet<Paciente> pacientes;
+
+    public Hospital(ArrayList<Medico> medicos, TreeSet<Paciente> pacientes) {
         this.medicos = medicos;
+        this.pacientes = pacientes;
     }
 
     public Hospital() {
@@ -23,7 +26,13 @@ public class Hospital {
         for (int i = 0; i < 100; i++) {
             medicos.add(new Medico());
         }
+        pacientes = new TreeSet<>();
+        for (int i = 0; i < 100; i++) {
+            pacientes.add(new Paciente());
+        }
     }
+    
+    
     
     
 }

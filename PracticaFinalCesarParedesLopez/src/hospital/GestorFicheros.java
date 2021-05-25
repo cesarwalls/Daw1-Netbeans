@@ -82,28 +82,28 @@ public class GestorFicheros {
     }
     //Escribir y Leer Ficheros Binario, el array completo de una vez
 
-    public static void escribirFicheroBinario(String fichero, Censo censo) {
+    public static void escribirFicheroBinario(String fichero, Hospital hospital) {
         try {
             ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(fichero));
-            os.writeObject(censo);
+            os.writeObject(hospital);
             os.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
 
-    public static Censo leerFicheroBinario(String fichero) {
-        Censo censoE = null;
+    public static Hospital leerFicheroBinario(String fichero) {
+        Hospital hospitalE = null;
         try {
             ObjectInputStream os = new ObjectInputStream(new FileInputStream(fichero));
-            censoE = (Censo) os.readObject();
+            hospitalE = (Hospital) os.readObject();
             os.close();
         } catch (ClassNotFoundException e) {
-            System.out.println(e.getMessage() + "Clase Censo no encontrada");
+            System.out.println(e.getMessage() + "Clase Hospital no encontrada");
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        return censoE;
+        return hospitalE;
     }
 //Escribir y Leer Ficheros Binario, elemento por elemento
 
