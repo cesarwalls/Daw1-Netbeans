@@ -70,7 +70,7 @@ public class GestorFicheros {
                 cadena = lf.nextLine();
                 String trozos[] = cadena.split(";");
                 System.out.println(cadena);
-                listaMedicos.add(new Medico(Integer.parseInt(trozos[0]), trozos[1], trozos[2], trozos[3], trozos[4]);
+                listaMedicos.add(new Medico(Integer.parseInt(trozos[0]), trozos[1], (Integer.parseInt(trozos[2]), (Integer.parseInt(trozos[3]),(Integer.parseInt(trozos[4], trozos[5];
             }
 
             lf.close();
