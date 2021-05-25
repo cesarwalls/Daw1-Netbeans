@@ -14,6 +14,7 @@ public class Paciente extends Personal{
 
     public Paciente() {
         super();
+        diasIngresado = (int) (Math.random() * 30 + 1);
     }
 
     public Paciente(int diasIngresado, int ID, int edad, boolean sexo, String nombre) {

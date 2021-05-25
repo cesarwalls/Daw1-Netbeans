@@ -5,12 +5,25 @@
  */
 package hospital;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author cesar
  */
 public class Hospital {
+    protected ArrayList<Medico> medicos;
     
+    public Hospital(ArrayList<Medico> medicos) {
+        this.medicos = medicos;
+    }
+
+    public Hospital() {
+        medicos = new ArrayList();
+        for (int i = 0; i < 100; i++) {
+            medicos.add(new Medico());
+        }
+    }
     
     
 }

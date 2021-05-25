@@ -6,18 +6,35 @@
 package hospital;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
  * @author cesar
  */
-public class Personal implements Serializable{
+public class Personal implements Serializable, Comparable<Personal> {
+
     protected int ID;
     protected int edad;
     protected boolean sexo;
     protected String nombre;
+    public static int contador = 0;
 
     public Personal() {
+        int sex = (int) (Math.random() * 2 + 1);
+        contador++;
+        ID = contador;
+        edad = (int) (Math.random() * 99 + 1);
+        if (sex == 1) {
+            sexo = false;
+        } else {
+            sexo = true;
+        }
+        if (sexo = false) {
+            nombre = "Hombre " + ID;
+        } else {
+            nombre = "Mujer" + ID;
+        }
     }
 
     public Personal(int ID, int edad, boolean sexo, String nombre) {
@@ -60,11 +77,36 @@ public class Personal implements Serializable{
     }
 
     @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 67 * hash + this.edad;
+        hash = 67 * hash + Objects.hashCode(this.nombre);
+        hash = 67 * hash + Objects.hashCode(this.ID);
+        hash = 67 * hash + Objects.hashCode(this.sexo);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        boolean iguales = false;
+        if (this.edad == ((Personal) obj).edad && this.nombre.equals(((Personal) obj).nombre) && this.ID == ((Personal) obj).ID && this.sexo == ((Personal) obj).sexo) {
+            iguales = true;
+        }
+
+        return iguales;
+
+    }
+
+    @Override
     public String toString() {
         return this.getClass().getSimpleName() + " ID=" + ID + ", edad=" + edad + ", sexo=" + sexo + ", nombre=" + nombre + '}';
     }
-    
-    
-    
-    
+
+    @Override
+    public int compareTo(Personal o) {
+        return this.nombre.compareTo(o.nombre);
+
+    }
+
 }

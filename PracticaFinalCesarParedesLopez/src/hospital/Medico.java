@@ -15,6 +15,24 @@ public class Medico extends Personal {
 
     public Medico() {
         super();
+        int dep = (int) (Math.random() * 5 + 1);
+        diasTrabajados = (int) (Math.random() * 1000 + 1);
+        switch (dep) {
+            case 1:
+                departamento = "Cardiología";
+                break;
+            case 2:
+                departamento = "Neurología";
+                break;
+            case 3:
+                departamento = "Inmunología";
+                break;
+            case 4:
+                departamento = "Hematología";
+            default:
+                departamento = "Pediatría";
+                break;
+        }
         
     }
 
@@ -23,6 +41,7 @@ public class Medico extends Personal {
         this.diasTrabajados = diasTrabajados;
         this.departamento = departamento;
     }
+
 
     public int getDiasTrabajados() {
         return diasTrabajados;
@@ -44,16 +63,5 @@ public class Medico extends Personal {
     public String toString() {
         return super.toString() + " diasTrabajados=" + diasTrabajados + ", departamento=" + departamento + '}';
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        
-        
     
 }
