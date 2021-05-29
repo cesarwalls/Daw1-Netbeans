@@ -70,7 +70,7 @@ public class GestorFicheros {
                 cadena = lf.nextLine();
                 String trozos[] = cadena.split(";");
                 System.out.println(cadena);
-                listaMedicos.add(new Medico(Integer.parseInt(trozos[0]), trozos[1], (Integer.parseInt(trozos[2]), (Integer.parseInt(trozos[3]),(Integer.parseInt(trozos[4], trozos[5];
+                //listaMedicos.add(new Medico(Integer.parseInt(trozos[0]), trozos[1], (Integer.parseInt(trozos[2]), (Integer.parseInt(trozos[3]),(Integer.parseInt(trozos[4], trozos[5];
             }
 
             lf.close();
@@ -106,7 +106,7 @@ public class GestorFicheros {
         return hospitalE;
     }
 //Escribir y Leer Ficheros Binario, elemento por elemento
-
+/*
     public static void escribirFicheroBinarioUnoPorUno(String fichero, ArrayList<Individuo> lista) {
         try {
             ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(fichero));
@@ -142,5 +142,5 @@ public class GestorFicheros {
         }
         return lista;
     }
-
+*/
 }
