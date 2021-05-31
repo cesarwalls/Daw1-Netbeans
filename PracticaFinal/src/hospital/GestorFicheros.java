@@ -18,6 +18,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -45,33 +47,38 @@ public class GestorFicheros {
         }
     }
 
-    public static void escribirFicheroTexto(String fichero, ArrayList<Medico> listaMedicos) {
+    public static void escribirFicheroTexto(String fichero, ArrayList<Medico> listaMedicos, TreeSet<Paciente> listaPacientes) {
         try {
             PrintWriter pw = new PrintWriter(fichero);
             for (int i = 0; i < listaMedicos.size(); i++) {
                 pw.println(listaMedicos.get(i).toString());
             }
             pw.close();
+            
+            Iterator<Paciente> it = listaPacientes.iterator();
+            for (int i = 0; i < listaPacientes.size(); i++) {
+                pw.println(it.next().toStringFichero());
+            }
+            pw.close();
+            
         } catch (IOException ex) {
             Logger.getLogger(GestorFicheros.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
 
-    public static ArrayList<Medico> leerFicheroTexto(String fichero) {
+    public static void leerFicheroTexto(String fichero) {
         System.out.println("leyedo fichero....");
         ArrayList<Medico> listaMedicos = new ArrayList();
         int i = 0;
         try {
             Scanner lf = new Scanner(new File(fichero));
             String cadena;
-
             while (lf.hasNextLine()) {
                 cadena = lf.nextLine();
                 String trozos[] = cadena.split(";");
                 System.out.println(cadena);
-                if (){
-                   //listaMedicos.add(new Medico(Integer.parseInt(trozos[0]), trozos[1], (Integer.parseInt(trozos[2]), (Integer.parseInt(trozos[3]),(Integer.parseInt(trozos[4], trozos[5];
+                if () {
+                    //listaMedicos.add(new Medico(Integer.parseInt(trozos[0]), trozos[1], (Integer.parseInt(trozos[2]), (Integer.parseInt(trozos[3]),(Integer.parseInt(trozos[4], trozos[5];
 
                 }
             }
@@ -81,7 +88,6 @@ public class GestorFicheros {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(GestorFicheros.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return listaMedicos;
     }
     //Escribir y Leer Ficheros Binario, el array completo de una vez
 
@@ -145,5 +151,5 @@ public class GestorFicheros {
         }
         return lista;
     }
-*/
+     */
 }
