@@ -30,10 +30,10 @@ public abstract class Personal implements Serializable, Comparable<Personal> {
         } else if (sex == 2) {
             sexo = true;
         }
-        nombre = "Persona " + ID;
+         nombre = this.getClass().getSimpleName() + " " +ID;
     }
 
-    public Personal(int edad, boolean sexo, String nombre) {
+    public Personal(int ID, int edad, boolean sexo, String nombre) {
         contador++;
         ID = contador;
         this.edad = edad;
@@ -107,7 +107,7 @@ public abstract class Personal implements Serializable, Comparable<Personal> {
     }
     
     public String toStringFichero() {
-        return this.getClass().getSimpleName() + ";" + ID + ";" + edad + ";" + sexo + ";" + nombre;
+        return ID + ";" + edad + ";" + sexo + ";" + nombre;
     }
 
 }

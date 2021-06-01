@@ -5,20 +5,40 @@
  */
 package hospital;
 
+import java.io.Serializable;
+
 /**
  *
  * @author cesar
  */
-public class Paciente extends Personal{
+public class Paciente implements Comparable<Paciente>, Serializable{
+
+    protected int ID;
+    protected int edad;
+    protected boolean sexo;
+    protected String nombre;
+    public static int contador = 0;
     protected int diasIngresado;
 
     public Paciente() {
-        super();
+        int sex = (int) (Math.random() * 2 + 1);
+        contador++;
+        ID = contador;
+        edad = (int) (Math.random() * 99 + 1);
+        if (sex == 1) {
+            sexo = false;
+        } else if (sex == 2) {
+            sexo = true;
+        }
+        nombre = this.getClass().getSimpleName() + " " + ID;
         diasIngresado = (int) (Math.random() * 30 + 1);
     }
 
-    public Paciente(int diasIngresado, int edad, boolean sexo, String nombre) {
-        super(edad, sexo, nombre);
+    public Paciente(int ID, int edad, boolean sexo, String nombre, int diasIngresado) {
+        this.ID = ID;
+        this.edad = edad;
+        this.sexo = sexo;
+        this.nombre = nombre;
         this.diasIngresado = diasIngresado;
     }
 
@@ -32,16 +52,16 @@ public class Paciente extends Personal{
 
     @Override
     public String toString() {
-        return super.toString() + " diasIngresado=" + diasIngresado + '}';
+        return "Paciente{" + "ID=" + ID + ", edad=" + edad + ", sexo=" + sexo + ", nombre=" + nombre + ", diasIngresado=" + diasIngresado + '}';
     }
-    
-    @Override
+
     public String toStringFichero() {
-        return super.toStringFichero() + ";" + diasIngresado;
+        return ID + ";" + edad + ";" + sexo + ";" + nombre + ";" + diasIngresado;
     }
-    
-    
-    
-    
-    
+
+    @Override
+    public int compareTo(Paciente o) {
+        return this.nombre.compareTo(o.nombre);
+    }
+
 }

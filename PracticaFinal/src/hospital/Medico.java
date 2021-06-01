@@ -37,8 +37,8 @@ public class Medico extends Personal {
 
     }
 
-    public Medico(int diasTrabajados, String departamento, int edad, boolean sexo, String nombre) {
-        super(edad, sexo, nombre);
+    public Medico(int ID, int edad, boolean sexo, String nombre, int diasTrabajados, String departamento) {
+        super(ID, edad, sexo, nombre);
         this.diasTrabajados = diasTrabajados;
         this.departamento = departamento;
     }

@@ -47,28 +47,28 @@ public class GestorFicheros {
         }
     }
 
-    public static void escribirFicheroTexto(String fichero, ArrayList<Medico> listaMedicos, TreeSet<Paciente> listaPacientes) {
+    public static void escribirFicheroTexto(String fichero, ArrayList<Personal> listaPersonal, TreeSet<Paciente> listaPacientes) {
         try {
             PrintWriter pw = new PrintWriter(fichero);
-            for (int i = 0; i < listaMedicos.size(); i++) {
-                pw.println(listaMedicos.get(i).toString());
+            for (int i = 0; i < listaPersonal.size(); i++) {
+                pw.println(listaPersonal.get(i).toStringFichero());
             }
-            pw.close();
             
             Iterator<Paciente> it = listaPacientes.iterator();
             for (int i = 0; i < listaPacientes.size(); i++) {
                 pw.println(it.next().toStringFichero());
             }
             pw.close();
-            
+
         } catch (IOException ex) {
             Logger.getLogger(GestorFicheros.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     public static void leerFicheroTexto(String fichero) {
-        System.out.println("leyedo fichero....");
-        ArrayList<Medico> listaMedicos = new ArrayList();
+        System.out.println("leyendo fichero....");
+        ArrayList<Personal> listaPersonal = new ArrayList();
+        TreeSet<Paciente> listaPacientes = new TreeSet<>();
         int i = 0;
         try {
             Scanner lf = new Scanner(new File(fichero));
@@ -77,20 +77,20 @@ public class GestorFicheros {
                 cadena = lf.nextLine();
                 String trozos[] = cadena.split(";");
                 System.out.println(cadena);
-                if () {
-                    //listaMedicos.add(new Medico(Integer.parseInt(trozos[0]), trozos[1], (Integer.parseInt(trozos[2]), (Integer.parseInt(trozos[3]),(Integer.parseInt(trozos[4], trozos[5];
-
+                if (trozos[3].equalsIgnoreCase("Medico")) {
+                    listaPersonal.add(new Medico(Integer.parseInt(trozos[0]), Integer.parseInt(trozos[1]), Boolean.parseBoolean(trozos[2]), trozos[3], Integer.parseInt(trozos[4]), trozos[5]));
+                } else {
+                    listaPacientes.add(new Paciente(Integer.parseInt(trozos[0]), Integer.parseInt(trozos[1]), Boolean.parseBoolean(trozos[2]), trozos[3], Integer.parseInt(trozos[4])));
                 }
             }
-
             lf.close();
 
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(GestorFicheros.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error al encontrar el fichero");
         }
     }
-    //Escribir y Leer Ficheros Binario, el array completo de una vez
 
+    
     public static void escribirFicheroBinario(String fichero, Hospital hospital) {
         try {
             ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(fichero));
@@ -114,42 +114,5 @@ public class GestorFicheros {
         }
         return hospitalE;
     }
-//Escribir y Leer Ficheros Binario, elemento por elemento
-/*
-    public static void escribirFicheroBinarioUnoPorUno(String fichero, ArrayList<Individuo> lista) {
-        try {
-            ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(fichero));
-            for (int i = 0; i < lista.size(); i++) {
-                os.writeObject(lista.get(i));
-            }
 
-            os.close();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    public static ArrayList<Individuo> leerFicheroBinarioUnoPorUno(String fichero) {
-        ArrayList<Individuo> lista = new ArrayList();
-        boolean EOF = false; //end of file
-        int i = 0;
-        try {
-            ObjectInputStream os = new ObjectInputStream(new FileInputStream(fichero));
-            while (!EOF) {
-                try {
-                    lista.add((Individuo) os.readObject());
-                } catch (EOFException e) {
-                    System.out.println("Se ha alcanzado el final del fichero");
-                    EOF = true;
-                }
-            }
-            os.close();
-        } catch (ClassNotFoundException e) {
-            System.out.println(e.getMessage() + "Clase Individuo [] no encontrada");
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-        return lista;
-    }
-     */
 }

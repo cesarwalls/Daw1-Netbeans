@@ -5,6 +5,7 @@
  */
 package hospital;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -14,33 +15,36 @@ import java.util.TreeSet;
  *
  * @author cesar
  */
-public class Hospital {
+public class Hospital implements Serializable {
 
-    protected ArrayList<Medico> medicos;
+    protected ArrayList<Personal> personal;
     protected TreeSet<Paciente> pacientes;
     protected Iterator<Paciente> iterator;
 
-    public Hospital(ArrayList<Medico> medicos, TreeSet<Paciente> pacientes) {
-        this.medicos = medicos;
+    public Hospital(ArrayList<Personal> personal, TreeSet<Paciente> pacientes) {
+        this.personal = personal;
         this.pacientes = pacientes;
+
     }
 
     public Hospital() {
-        medicos = new ArrayList();
+        personal = new ArrayList();
         for (int i = 0; i < 100; i++) {
-            medicos.add(new Medico());
+            personal.add(new Medico());
         }
 
         pacientes = new TreeSet<>();
         for (int i = 0; i < 100; i++) {
             pacientes.add(new Paciente());
         }
+        GestorFicheros.escribirFicheroBinario(GestorFicheros.FICHERO_BINARIO, this);
+        GestorFicheros.escribirFicheroTexto(GestorFicheros.FICHERO, personal, pacientes);
     }
 
     public void consultaHospital() {
         iterator = pacientes.iterator();
-        for (int i = 0; i < medicos.size(); i++) {
-            System.out.println(medicos.get(i).toStringFichero());
+        for (int i = 0; i < personal.size(); i++) {
+            System.out.println(personal.get(i).toStringFichero());
         }
         for (int i = 0; i < pacientes.size(); i++) {
             System.out.println(iterator.next().toStringFichero());
@@ -71,8 +75,10 @@ public class Hospital {
             int diasTrabajados = sc.nextInt();
             System.out.println("Introduce su departamento");
             String departamento = sc.nextLine();
-            Medico m = new Medico(diasTrabajados, departamento, edad, sexo, nombre);
-            medicos.add(m);
+            System.out.println("Introduce su ID");
+            int ID = sc.nextInt();
+            Medico m = new Medico(ID, edad, sexo, nombre, diasTrabajados, departamento);
+            personal.add(m);
         } else if (eleccion == 2) {
             System.out.println("Introduce edad");
             int edad = sc.nextInt();
@@ -89,7 +95,9 @@ public class Hospital {
             String nombre = sc.nextLine();
             System.out.println("Introduce días ingresado");
             int diasIngresado = sc.nextInt();
-            Paciente p = new Paciente(diasIngresado, edad, sexo, nombre);
+            System.out.println("Introduce su ID");
+            int ID = sc.nextInt();
+            Paciente p = new Paciente(ID, edad, sexo, nombre, diasIngresado);
             pacientes.add(p);
         }
     }
@@ -99,10 +107,10 @@ public class Hospital {
         boolean stop = false;
         System.out.println("Dime el ID del médico que quieres");
         int ID = sc.nextInt();
-        for (int i = 0; i < medicos.size() && !stop; i++) {
-            if (medicos.get(i).ID == ID) {
+        for (int i = 0; i < personal.size() && !stop; i++) {
+            if (personal.get(i) instanceof Medico && personal.get(i).ID == ID) {
                 System.out.println("Este es tu médico");
-                System.out.println(medicos.get(i).toStringFichero());
+                System.out.println(personal.get(i).toStringFichero());
                 stop = true;
             }
         }
