@@ -142,36 +142,53 @@ public class Hospital implements Serializable {
         for (int i = 0; i < personal.size(); i++) {
             if (personal.get(i) instanceof Medico && personal.get(i).ID == ID) {
                 System.out.println("Dime los nuevos días trabajados");
-                int díasTrabajados = sc.nextInt();
-                ((Medico) personal.get(i)).setDiasTrabajados(díasTrabajados);
+                int diasTrabajados = sc.nextInt();
+                ((Medico) personal.get(i)).setDiasTrabajados(diasTrabajados);
+                System.out.println("Dime su nuevo departamento");
+                sc.next();
+                String departamento = sc.nextLine();
+                ((Medico) personal.get(i)).setDepartamento(departamento);
+                System.out.println("Dime su nuevo ID");
+                int identificacion = sc.nextInt();
+                ((Medico) personal.get(i)).setID(identificacion);
+                System.out.println("Dime su nuevo Nombre");
+                sc.next();
+                String nombre = sc.nextLine();
+                ((Medico) personal.get(i)).setNombre(nombre);
+                System.out.println("Dime su nueva Edad");
+                int edad = sc.nextInt();
+                ((Medico) personal.get(i)).setEdad(edad);
+                System.out.println("El nuevo médico es: " + personal.get(i).toString());
+            }
+        }
+        sc.close();
+    }
+    
+    public void actualizarPaciente() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Dime el ID del paciente");
+        ArrayList<Paciente> listaPacientes = new ArrayList(pacientes);
+        int ID = sc.nextInt();
+        for (int i = 0; i < pacientes.size(); i++) {
+            if (listaPacientes.get(i) instanceof Paciente && listaPacientes.get(i).ID == ID) {
+                System.out.println("Dime los nuevos días ingresado");
+                int diasIngresado = sc.nextInt();
+                listaPacientes.get(i).setDiasIngresado(diasIngresado);
+                System.out.println("Dime su nuevo ID");
+                int identificacion = sc.nextInt();
+                listaPacientes.get(i).setID(identificacion);
+                System.out.println("Dime su nuevo Nombre");
+                sc.next();
+                String nombre = sc.nextLine();
+                listaPacientes.get(i).setNombre(nombre);
+                System.out.println("Dime su nueva Edad");
+                int edad = sc.nextInt();
+                listaPacientes.get(i).setEdad(edad);
+                System.out.println("El nuevo paciente es: " + listaPacientes.get(i).toString());
             }
         }
         sc.close();
     }
 
-    /*public void eliminarAlojamientos() {
-        //Elimina bien pero cuando le digo que no elimine me repite el bucle varias veces (tantas para llegar a la posicion del alojamiento en el array)
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Dime la pronvincia");
-        String provincia = sc.next();
-        for (int i = 0; i < listaAlojamientos.size(); i++) {
-            if (listaAlojamientos.get(i).provincia.equalsIgnoreCase(provincia)) {
-                for (int j = 0; j < listaAlojamientos.size(); j++) {
-                    System.out.println("Hemos encontrado alojamientos a tu disposicion");
-                    System.out.println("Desea elimninar el alojamiento");
-                    System.out.println(listaAlojamientos.get(i).toString());
-                    System.out.println("Si es así pulse 1 si es que no pulse 0");
-                    int eleccion = sc.nextInt();
-                    if (eleccion == 1) {
-                        listaAlojamientos.remove(i);
-                        System.out.println("Se ha eliminado el alojamiento");
-                    } else {
-                        System.out.println("No se ha eliminado");
-                    }
-                }
-            }
-        }
-    }
-*/
 
 }

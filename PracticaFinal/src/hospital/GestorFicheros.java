@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Profesor
+ * @author cesar
  */
 public class GestorFicheros {
 

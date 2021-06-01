@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author prog
+ * @author cesar
  */
 public class Tester {
 
@@ -20,84 +20,168 @@ public class Tester {
         Hospital hospital = new Hospital();
         GestorFicheros.crearFicheros();
         int eleccion;
-        
+        int eleccion2;
+        int eleccion3;
+
         do {
-            System.out.println("Bienvenido");
-            System.out.println("Pulse 1 para consultar los pacientes y médicos del hospital");
-            System.out.println("Pulse 2 para consultar un médico mediante su ID");
-            System.out.println("Pulse 3 para añadir un médico o un paciente al hospital");
-            System.out.println("Pulse 4 para volcar los datos a un fichero de texto");
-            System.out.println("Pulse 5 para volcar los datos a un fichero binario");
-            System.out.println("Pulse 6 para leer del fichero de texto");
-            System.out.println("Pulse 7 para leer del fichero binario");
-            System.out.println("Pulse 8 para comparar Médicos");
-            System.out.println("Pulse 9 para consultar Médicos por ID");
-            System.out.println("Pulse 10 para comparar Pacientes");
-            System.out.println("Pulse 0 para salir del programa");
-
+            System.out.println("Bienvenido a la gestión del Hospital Infanta Leonor");
+            System.out.println("Si usted es administrador pulse 1");
+            System.out.println("Si usted es usuario pulse 2");
+            System.out.println("Si quiere salir del programa pulse cualquier otro número");
             eleccion = sc.nextInt();
-            switch (eleccion) {
-                case 0:
-                    System.out.println("Adios");
-                    break;
-                case 1:
-                    hospital.consultaHospital();
-                    break;
-                case 2:
-                    hospital.consultaDeMedicosID();
-                    break;
-                case 3:
-                    hospital.añadirPersonal();
-                    break;
-                case 4:
-                    GestorFicheros.escribirFicheroTexto(GestorFicheros.FICHERO, hospital.personal, hospital.pacientes);
-                    break;
-                case 5:
-                    GestorFicheros.escribirFicheroBinario(GestorFicheros.FICHERO_BINARIO, hospital);
-                    break;
-                case 6:
-                    GestorFicheros.leerFicheroTexto(GestorFicheros.FICHERO);
-                    break;
-                case 7:
-                    GestorFicheros.leerFicheroBinario(GestorFicheros.FICHERO_BINARIO);
-                    break;
-                case 8:
-                    System.out.println("Has elegido comparar Médicos");
-                    System.out.println("Por orden natural");
-                    hospital.consultaMedicos();
-                    Collections.sort(hospital.personal, new porEdadMedico());
-                    System.out.println("Por edad");
-                    hospital.consultaMedicos();
-                    Collections.sort(hospital.personal, new porDiasTrabajados());
-                    System.out.println("Por días trabajados");
-                    hospital.consultaMedicos();
-                    Collections.sort(hospital.personal, new porEdadIgualDiasMedico());
-                    System.out.println("A igualdad de edad, por días trabajados");
-                    hospital.consultaMedicos();
-                    break;
-                case 9:
-                    hospital.consultaDeMedicosID();
-                    break;
-                case 10:
-                    //Tengo dudas
-                    System.out.println("Has elegido comparar Pacientes");
-                    System.out.println("Por orden natural");
-                    hospital.consultaPacientes();
-                    ArrayList<Paciente> listaPacientes = new ArrayList(hospital.pacientes);
-                    System.out.println("Por edad");
-                    Collections.sort(listaPacientes, new porEdadPaciente());
-                    System.out.println(listaPacientes.toString());
-                    System.out.println("Por dias ingresados");
-                    Collections.sort(listaPacientes, new porDiasIngresados());
-                    hospital.consultaPacientes();
-                    Collections.sort(listaPacientes, new porEdadIgualDiasPaciente());
-                    hospital.consultaPacientes();
-                    break;
-                default:
-                    System.out.println("Se ha equivocado de número");
-                    break;
-            }
-        } while (eleccion != 0);
+            if (eleccion == 1) {
 
+                do {
+                    System.out.println("Bienvenido");
+                    System.out.println("Pulse 1 para consultar los pacientes y médicos del hospital");
+                    System.out.println("Pulse 2 para consultar un médico mediante su ID");
+                    System.out.println("Pulse 3 para añadir un médico o un paciente al hospital");
+                    System.out.println("Pulse 4 para volcar los datos a un fichero de texto");
+                    System.out.println("Pulse 5 para volcar los datos a un fichero binario");
+                    System.out.println("Pulse 6 para leer del fichero de texto");
+                    System.out.println("Pulse 7 para leer del fichero binario");
+                    System.out.println("Pulse 8 para comparar Médicos");
+                    System.out.println("Pulse 9 para consultar Médicos por ID");
+                    System.out.println("Pulse 10 para comparar Pacientes");
+                    System.out.println("Pulse 11 para actualizar un Médico");
+                    System.out.println("Pulse 12 para actualizar un Paciente");
+                    System.out.println("Pulse 0 para salir del programa");
+
+                    eleccion2 = sc.nextInt();
+                    switch (eleccion2) {
+                        case 0:
+                            System.out.println("Adios");
+                            break;
+                        case 1:
+                            hospital.consultaHospital();
+                            break;
+                        case 2:
+                            hospital.consultaDeMedicosID();
+                            break;
+                        case 3:
+                            hospital.añadirPersonal();
+                            break;
+                        case 4:
+                            GestorFicheros.escribirFicheroTexto(GestorFicheros.FICHERO, hospital.personal, hospital.pacientes);
+                            break;
+                        case 5:
+                            GestorFicheros.escribirFicheroBinario(GestorFicheros.FICHERO_BINARIO, hospital);
+                            break;
+                        case 6:
+                            GestorFicheros.leerFicheroTexto(GestorFicheros.FICHERO);
+                            break;
+                        case 7:
+                            GestorFicheros.leerFicheroBinario(GestorFicheros.FICHERO_BINARIO);
+                            break;
+                        case 8:
+                            System.out.println("Has elegido comparar Médicos");
+                            System.out.println("Por orden natural");
+                            hospital.consultaMedicos();
+                            Collections.sort(hospital.personal, new porEdadMedico());
+                            System.out.println("Por edad");
+                            hospital.consultaMedicos();
+                            Collections.sort(hospital.personal, new porDiasTrabajados());
+                            System.out.println("Por días trabajados");
+                            hospital.consultaMedicos();
+                            Collections.sort(hospital.personal, new porEdadIgualDiasMedico());
+                            System.out.println("A igualdad de edad, por días trabajados");
+                            hospital.consultaMedicos();
+                            break;
+                        case 9:
+                            hospital.consultaDeMedicosID();
+                            break;
+                        case 10:
+                            //Tengo dudas
+                            System.out.println("Has elegido comparar Pacientes");
+                            System.out.println("Por orden natural");
+                            hospital.consultaPacientes();
+                            ArrayList<Paciente> listaPacientes = new ArrayList(hospital.pacientes);
+                            System.out.println("Por edad");
+                            Collections.sort(listaPacientes, new porEdadPaciente());
+                            System.out.println(listaPacientes);
+                            System.out.println("Por dias ingresados");
+                            Collections.sort(listaPacientes, new porDiasIngresados());
+                            System.out.println(listaPacientes);
+                            Collections.sort(listaPacientes, new porEdadIgualDiasPaciente());
+                            System.out.println(listaPacientes);
+                            break;
+                        case 11:
+                            hospital.actualizarMedico();
+                            break;
+                        case 12:
+                            hospital.actualizarPaciente();
+                            break;
+                        default:
+                            System.out.println("Se ha equivocado de número");
+                            break;
+                    }
+                } while (eleccion2 != 0);
+            } else if (eleccion==2){
+                do {
+                    System.out.println("Bienvenido");
+                    System.out.println("Pulse 1 para consultar los pacientes y médicos del hospital");
+                    System.out.println("Pulse 2 para consultar un médico mediante su ID");
+                    System.out.println("Pulse 3 para leer del fichero de texto");
+                    System.out.println("Pulse 4 para leer del fichero binario");
+                    System.out.println("Pulse 5 para comparar Médicos");
+                    System.out.println("Pulse 6 para consultar Médicos por ID");
+                    System.out.println("Pulse 7 para comparar Pacientes");
+                    System.out.println("Pulse 0 para salir del programa");
+
+                    eleccion3 = sc.nextInt();
+                    switch (eleccion3) {
+                        case 0:
+                            System.out.println("Adios");
+                            break;
+                        case 1:
+                            hospital.consultaHospital();
+                            break;
+                        case 2:
+                            hospital.consultaDeMedicosID();
+                            break;
+                        case 3:
+                            GestorFicheros.leerFicheroTexto(GestorFicheros.FICHERO);
+                            break;
+                        case 4:
+                            GestorFicheros.leerFicheroBinario(GestorFicheros.FICHERO_BINARIO);
+                            break;
+                        case 5:
+                            System.out.println("Has elegido comparar Médicos");
+                            System.out.println("Por orden natural");
+                            hospital.consultaMedicos();
+                            Collections.sort(hospital.personal, new porEdadMedico());
+                            System.out.println("Por edad");
+                            hospital.consultaMedicos();
+                            Collections.sort(hospital.personal, new porDiasTrabajados());
+                            System.out.println("Por días trabajados");
+                            hospital.consultaMedicos();
+                            Collections.sort(hospital.personal, new porEdadIgualDiasMedico());
+                            System.out.println("A igualdad de edad, por días trabajados");
+                            hospital.consultaMedicos();
+                            break;
+                        case 6:
+                            hospital.consultaDeMedicosID();
+                            break;
+                        case 7:
+                            System.out.println("Has elegido comparar Pacientes");
+                            System.out.println("Por orden natural");
+                            hospital.consultaPacientes();
+                            ArrayList<Paciente> listaPacientes = new ArrayList(hospital.pacientes);
+                            System.out.println("Por edad");
+                            Collections.sort(listaPacientes, new porEdadPaciente());
+                            System.out.println(listaPacientes);
+                            System.out.println("Por dias ingresados");
+                            Collections.sort(listaPacientes, new porDiasIngresados());
+                            System.out.println(listaPacientes);
+                            Collections.sort(listaPacientes, new porEdadIgualDiasPaciente());
+                            System.out.println(listaPacientes);
+                            break;
+                        default:
+                            System.out.println("Se ha equivocado de número");
+                            break;
+                    }
+                } while (eleccion3 != 0);
+            }
+        } while (eleccion ==1 || eleccion == 2);
     }
 }

@@ -50,6 +50,46 @@ public class Paciente implements Comparable<Paciente>, Serializable{
         this.diasIngresado = diasIngresado;
     }
 
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public boolean isSexo() {
+        return sexo;
+    }
+
+    public void setSexo(boolean sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public static int getContador() {
+        return contador;
+    }
+
+    public static void setContador(int contador) {
+        Paciente.contador = contador;
+    }
+
     @Override
     public String toString() {
         return "Paciente{" + "ID=" + ID + ", edad=" + edad + ", sexo=" + sexo + ", nombre=" + nombre + ", diasIngresado=" + diasIngresado + '}';
