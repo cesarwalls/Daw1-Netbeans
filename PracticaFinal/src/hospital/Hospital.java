@@ -59,13 +59,13 @@ public class Hospital implements Serializable {
 
         }
     }
+
     public void consultaPacientes() {
         iterator = pacientes.iterator();
         for (int i = 0; i < pacientes.size(); i++) {
             System.out.println(iterator.next().toStringFichero());
         }
     }
-    
 
     public void añadirPersonal() {
         Scanner sc = new Scanner(System.in);
@@ -134,27 +134,22 @@ public class Hospital implements Serializable {
             System.out.println("No se ha encontrado ningún médico");
         }
     }
-}
 
-/*
-    public void actualizarCategoria() throws ExcepcionPropia {
-        //No puedo acceder a la categoría del hotel
+    public void actualizarMedico() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Dime el nombre del hotel");
-        String nombre = sc.nextLine();
-        for (int i = 0; i < listaAlojamientos.size(); i++) {
-            if (listaAlojamientos.get(i).nombre.equalsIgnoreCase(nombre)) {
-                System.out.println("Hemos encontrado alojamientos a tu disposicion");
-                System.out.println(listaAlojamientos.get(i).toString());
-                System.out.println("Dime el su nueva categoria");
-                int categ = sc.nextInt();
-
+        System.out.println("Dime el ID del médico");
+        int ID = sc.nextInt();
+        for (int i = 0; i < personal.size(); i++) {
+            if (personal.get(i) instanceof Medico && personal.get(i).ID == ID) {
+                System.out.println("Dime los nuevos días trabajados");
+                int díasTrabajados = sc.nextInt();
+                ((Medico) personal.get(i)).setDiasTrabajados(díasTrabajados);
             }
         }
         sc.close();
     }
 
-    public void eliminarAlojamientos() {
+    /*public void eliminarAlojamientos() {
         //Elimina bien pero cuando le digo que no elimine me repite el bucle varias veces (tantas para llegar a la posicion del alojamiento en el array)
         Scanner sc = new Scanner(System.in);
         System.out.println("Dime la pronvincia");
@@ -177,9 +172,6 @@ public class Hospital implements Serializable {
             }
         }
     }
+*/
 
-    public void consultaOrdenadaNombre() {
-        Collections.sort(listaAlojamientos);
-        consultaAlojamientos();
-    }
- */
+}
