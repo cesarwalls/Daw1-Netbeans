@@ -51,6 +51,22 @@ public class Hospital implements Serializable {
         }
     }
 
+    public void consultaMedicos() {
+        for (int i = 0; i < personal.size(); i++) {
+            if (personal.get(i).getNombre().contains("Medico")) {
+                System.out.println(personal.get(i).toStringFichero());
+            }
+
+        }
+    }
+    public void consultaPacientes() {
+        iterator = pacientes.iterator();
+        for (int i = 0; i < pacientes.size(); i++) {
+            System.out.println(iterator.next().toStringFichero());
+        }
+    }
+    
+
     public void añadirPersonal() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Dime qué tipo de personal quieres añadir");

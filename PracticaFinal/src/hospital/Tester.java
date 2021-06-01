@@ -5,6 +5,7 @@
  */
 package hospital;
 
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -27,6 +28,9 @@ public class Tester {
             System.out.println("Pulse 5 para volcar los datos a un fichero binario");
             System.out.println("Pulse 6 para leer del fichero de texto");
             System.out.println("Pulse 7 para leer del fichero binario");
+            System.out.println("Pulse 8 para comparar Médicos");
+            System.out.println("Pulse 9 para consultar Médicos por ID");
+            System.out.println("Pulse 10 para comparar Pacientes");
             System.out.println("Pulse 0 para salir del programa");
 
             eleccion = sc.nextInt();
@@ -54,6 +58,37 @@ public class Tester {
                     break;
                 case 7:
                     GestorFicheros.leerFicheroBinario(GestorFicheros.FICHERO_BINARIO);
+                    break;
+                case 8:
+                    System.out.println("Has elegido comparar Médicos");
+                    System.out.println("Por orden natural");
+                    hospital.consultaMedicos();
+                    Collections.sort(hospital.personal, new porEdadMedico());
+                    System.out.println("Por edad");
+                    hospital.consultaMedicos();
+                    Collections.sort(hospital.personal, new porDiasTrabajados());
+                    System.out.println("Por días trabajados");
+                    hospital.consultaMedicos();
+                    Collections.sort(hospital.personal, new porEdadIgualDiasMedico());
+                    System.out.println("A igualdad de edad, por días trabajados");
+                    hospital.consultaMedicos();
+                    break;
+                case 9:
+                    hospital.consultaDeMedicosID();
+                    break;
+                case 10:
+                    System.out.println("Has elegido comparar Pacientes");
+                    System.out.println("Por orden natural");
+                    hospital.consultaPacientes();
+                    //ToDo
+                    System.out.println("Por edad");
+                    hospital.consultaPacientes();
+                    //ToDo
+                    System.out.println("Por dias ingresados");
+                    hospital.consultaPacientes();
+                    System.out.println("A igual de edad, por días ingresados");
+                    //ToDo
+                    hospital.consultaPacientes();
                     break;
                 default:
                     System.out.println("Se ha equivocado de número");
