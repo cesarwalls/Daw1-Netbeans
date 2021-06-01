@@ -5,6 +5,7 @@
  */
 package hospital;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
@@ -19,6 +20,7 @@ public class Tester {
         Hospital hospital = new Hospital();
         GestorFicheros.crearFicheros();
         int eleccion;
+        
         do {
             System.out.println("Bienvenido");
             System.out.println("Pulse 1 para consultar los pacientes y médicos del hospital");
@@ -77,17 +79,18 @@ public class Tester {
                     hospital.consultaDeMedicosID();
                     break;
                 case 10:
+                    //Tengo dudas
                     System.out.println("Has elegido comparar Pacientes");
                     System.out.println("Por orden natural");
                     hospital.consultaPacientes();
-                    //ToDo
+                    ArrayList<Paciente> listaPacientes = new ArrayList(hospital.pacientes);
                     System.out.println("Por edad");
-                    hospital.consultaPacientes();
-                    //ToDo
+                    Collections.sort(listaPacientes, new porEdadPaciente());
+                    System.out.println(listaPacientes.toString());
                     System.out.println("Por dias ingresados");
+                    Collections.sort(listaPacientes, new porDiasIngresados());
                     hospital.consultaPacientes();
-                    System.out.println("A igual de edad, por días ingresados");
-                    //ToDo
+                    Collections.sort(listaPacientes, new porEdadIgualDiasPaciente());
                     hospital.consultaPacientes();
                     break;
                 default:

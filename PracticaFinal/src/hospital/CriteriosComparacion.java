@@ -54,6 +54,7 @@ class porEdadIgualDiasMedico implements Comparator<Personal> {
         }
         return aux2;
     }
+}
 
     class porEdadPaciente implements Comparator<Paciente> {
 
@@ -86,4 +87,4 @@ class porEdadIgualDiasMedico implements Comparator<Personal> {
         }
 
     }
-}
+
