@@ -13,11 +13,11 @@ import java.util.Scanner;
  *
  * @author cesar
  */
-public class Tester {
+public class TesterVisitas {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Hospital hospital = new Hospital();
+        HospitalVisitas hospital = new HospitalVisitas();
         GestorFicheros.crearFicheros();
         int eleccion;
         int eleccion2;
@@ -65,7 +65,7 @@ public class Tester {
                             GestorFicheros.escribirFicheroTexto(GestorFicheros.FICHERO, hospital.personal, hospital.pacientes);
                             break;
                         case 5:
-                            GestorFicheros.escribirFicheroBinario(GestorFicheros.FICHERO_BINARIO, hospital);
+                            //GestorFicheros.escribirFicheroBinario(GestorFicheros.FICHERO_BINARIO, hospital);
                             break;
                         case 6:
                             GestorFicheros.leerFicheroTexto(GestorFicheros.FICHERO);
