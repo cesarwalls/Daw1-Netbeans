@@ -13,22 +13,30 @@ import java.util.Random;
  *
  * @author cesar
  */
-public class Visita {
+public class Visita{
 
     protected int identificador;
     protected Fecha fecha;
-    protected ArrayList<Medico> medicos;
-    protected int IDMedico;
-    protected ArrayList<Paciente> pacientes;
-    protected int IDPaciente;
-    protected int contador = 0;
+    protected int idMedico;
+    protected int idPaciente;
+    protected int contador;
+    protected static int autonumerico;
 
-    public Visita() {
-        contador++;
-        identificador = contador;
+    public Visita(){
+        autonumerico++;
+        contador = autonumerico;
         fecha = new Fecha();
-        IDMedico = medicos.get((int) (Math.random() * medicos.size())).getID();
-        IDPaciente = pacientes.get((int) (Math.random() * medicos.size())).getID();
+        identificador = contador;
+        this.medico = medico;
+        this.paciente = paciente;
+        
+    }
+
+    public Visita(int identificador, Fecha fecha, Medico medico, Paciente paciente) {
+        this.identificador = identificador;
+        this.fecha = fecha;
+        this.medico = medico;
+        this.paciente = paciente;
     }
 
     public int getIdentificador() {
@@ -47,33 +55,29 @@ public class Visita {
         this.fecha = fecha;
     }
 
-    public int getIDMedico() {
-        return IDMedico;
+    public Medico getMedico() {
+        return medico;
     }
 
-    public void setIDMedico(int IDMedico) {
-        this.IDMedico = IDMedico;
+    public void setMedico(Medico medico) {
+        this.medico = medico;
     }
 
-    public int getIDPaciente() {
-        return IDPaciente;
+    public Paciente getPaciente() {
+        return paciente;
     }
 
-    public void setIDPaciente(int IDPaciente) {
-        this.IDPaciente = IDPaciente;
-    }
-
-    public int getContador() {
-        return contador;
-    }
-
-    public void setContador(int contador) {
-        this.contador = contador;
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
     }
 
     @Override
     public String toString() {
-        return "Visita{" + "identificador=" + identificador + ", fecha=" + fecha + ", IDMedico=" + IDMedico + ", IDPaciente=" + IDPaciente + '}';
+        return "Visita{" + "identificador=" + identificador + ", fecha=" + fecha + ", medico=" + medico + ", paciente=" + paciente + '}';
+    }
+
+    public String toStringFichero() {
+        return identificador + ";" + fecha.toStringFichero() + ";" + medico.ID + ";" + paciente.ID;
     }
 
 }

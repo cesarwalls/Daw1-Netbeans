@@ -13,15 +13,12 @@ import java.util.Scanner;
  *
  * @author cesar
  */
-public class Tester {
-	public static void listarArrayList(ArrayList<Paciente> lista) {}
+public class TesterVisitas {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        //Hospital hospital = new Hospital();
-        //GestorFicheros.crearFicheros();
-        Hospital hospital = GestorFicheros.leerFicheroBinario(GestorFicheros.FICHERO_BINARIO);
-       
+        HospitalVisitas hospitalvisitas = new HospitalVisitas();
+        GestorFicheros.crearFicheros();
         int eleccion;
         int eleccion2;
         int eleccion3;
@@ -56,19 +53,19 @@ public class Tester {
                             System.out.println("Adios");
                             break;
                         case 1:
-                            hospital.consultaHospital();
+                            hospitalvisitas.consultaHospital();
                             break;
                         case 2:
-                            hospital.consultaDeMedicosID();
+                            hospitalvisitas.consultaDeMedicosID();
                             break;
                         case 3:
-                            hospital.a�adirPersonal();
+                            hospitalvisitas.añadirPersonal();
                             break;
                         case 4:
-                            GestorFicheros.escribirFicheroTexto(GestorFicheros.FICHERO, hospital.personal, hospital.pacientes);
+                            GestorFicheros.escribirFicheroTexto(GestorFicheros.FICHERO, hospitalvisitas.personal, hospitalvisitas.pacientes);
                             break;
                         case 5:
-                            GestorFicheros.escribirFicheroBinario(GestorFicheros.FICHERO_BINARIO, hospital);
+                            //GestorFicheros.escribirFicheroBinario(GestorFicheros.FICHERO_BINARIO, hospitalvisitas);
                             break;
                         case 6:
                             GestorFicheros.leerFicheroTexto(GestorFicheros.FICHERO);
@@ -79,26 +76,26 @@ public class Tester {
                         case 8:
                             System.out.println("Has elegido comparar Médicos");
                             System.out.println("Por orden natural");
-                            hospital.consultaMedicos();
-                            Collections.sort(hospital.personal, new porEdadMedico());
+                            hospitalvisitas.consultaMedicos();
+                            Collections.sort(hospitalvisitas.personal, new porEdadMedico());
                             System.out.println("Por edad");
-                            hospital.consultaMedicos();
-                            Collections.sort(hospital.personal, new porDiasTrabajados());
+                            hospitalvisitas.consultaMedicos();
+                            Collections.sort(hospitalvisitas.personal, new porDiasTrabajados());
                             System.out.println("Por días trabajados");
-                            hospital.consultaMedicos();
-                            Collections.sort(hospital.personal, new porEdadIgualDiasMedico());
+                            hospitalvisitas.consultaMedicos();
+                            Collections.sort(hospitalvisitas.personal, new porEdadIgualDiasMedico());
                             System.out.println("A igualdad de edad, por días trabajados");
-                            hospital.consultaMedicos();
+                            hospitalvisitas.consultaMedicos();
                             break;
                         case 9:
-                            hospital.consultaDeMedicosID();
+                            hospitalvisitas.consultaDeMedicosID();
                             break;
                         case 10:
                             //Tengo dudas
                             System.out.println("Has elegido comparar Pacientes");
                             System.out.println("Por orden natural");
-                            hospital.consultaPacientes();
-                            ArrayList<Paciente> listaPacientes = new ArrayList(hospital.pacientes);
+                            hospitalvisitas.consultaPacientes();
+                            ArrayList<Paciente> listaPacientes = new ArrayList(hospitalvisitas.pacientes);
                             System.out.println("Por edad");
                             Collections.sort(listaPacientes, new porEdadPaciente());
                             System.out.println(listaPacientes);
@@ -109,10 +106,10 @@ public class Tester {
                             System.out.println(listaPacientes);
                             break;
                         case 11:
-                            hospital.actualizarMedico();
+                            hospitalvisitas.actualizarMedico();
                             break;
                         case 12:
-                            hospital.actualizarPaciente();
+                            hospitalvisitas.actualizarPaciente();
                             break;
                         case 13:
                             
@@ -139,10 +136,10 @@ public class Tester {
                             System.out.println("Adios");
                             break;
                         case 1:
-                            hospital.consultaHospital();
+                            hospitalvisitas.consultaHospital();
                             break;
                         case 2:
-                            hospital.consultaDeMedicosID();
+                            hospitalvisitas.consultaDeMedicosID();
                             break;
                         case 3:
                             GestorFicheros.leerFicheroTexto(GestorFicheros.FICHERO);
@@ -153,25 +150,25 @@ public class Tester {
                         case 5:
                             System.out.println("Has elegido comparar Médicos");
                             System.out.println("Por orden natural");
-                            hospital.consultaMedicos();
-                            Collections.sort(hospital.personal, new porEdadMedico());
+                            hospitalvisitas.consultaMedicos();
+                            Collections.sort(hospitalvisitas.personal, new porEdadMedico());
                             System.out.println("Por edad");
-                            hospital.consultaMedicos();
-                            Collections.sort(hospital.personal, new porDiasTrabajados());
+                            hospitalvisitas.consultaMedicos();
+                            Collections.sort(hospitalvisitas.personal, new porDiasTrabajados());
                             System.out.println("Por días trabajados");
-                            hospital.consultaMedicos();
-                            Collections.sort(hospital.personal, new porEdadIgualDiasMedico());
+                            hospitalvisitas.consultaMedicos();
+                            Collections.sort(hospitalvisitas.personal, new porEdadIgualDiasMedico());
                             System.out.println("A igualdad de edad, por días trabajados");
-                            hospital.consultaMedicos();
+                            hospitalvisitas.consultaMedicos();
                             break;
                         case 6:
-                            hospital.consultaDeMedicosID();
+                            hospitalvisitas.consultaDeMedicosID();
                             break;
                         case 7:
                             System.out.println("Has elegido comparar Pacientes");
                             System.out.println("Por orden natural");
-                            hospital.consultaPacientes();
-                            ArrayList<Paciente> listaPacientes = new ArrayList(hospital.pacientes);
+                            hospitalvisitas.consultaPacientes();
+                            ArrayList<Paciente> listaPacientes = new ArrayList(hospitalvisitas.pacientes);
                             System.out.println("Por edad");
                             Collections.sort(listaPacientes, new porEdadPaciente());
                             System.out.println(listaPacientes);

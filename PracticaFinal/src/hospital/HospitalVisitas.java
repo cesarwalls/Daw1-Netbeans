@@ -15,32 +15,44 @@ import java.util.TreeSet;
  *
  * @author cesar
  */
-public class Hospital implements Serializable {
+public class HospitalVisitas implements Serializable {
 
-    protected ArrayList<Personal> personal;
-    protected TreeSet<Paciente> pacientes;
+    public static ArrayList<Personal> personal;
+    public static TreeSet<Paciente> pacientes;
     protected Iterator<Paciente> iterator;
+    protected ArrayList<Visita> visitas;
 
-
-    public Hospital(ArrayList<Personal> personal, TreeSet<Paciente> pacientes) {
+    public HospitalVisitas(ArrayList<Personal> personal, TreeSet<Paciente> pacientes, ArrayList<Visita> visitas) {
         this.personal = personal;
         this.pacientes = pacientes;
+        this.visitas = visitas;
 
     }
-
-    public Hospital() {
+    
+    public int randomMedico() {
+    		
+    		return personal.get((int)(Math.random()*pacientes.size())).ID;
+    	
+    	
+    }
+    public HospitalVisitas() {
         personal = new ArrayList();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             personal.add(new Medico());
         }
 
         pacientes = new TreeSet<>();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             pacientes.add(new Paciente());
         }
-        GestorFicheros.escribirFicheroBinario(GestorFicheros.FICHERO_BINARIO, this);
+
+        visitas = new ArrayList();
+        for (int i = 0; i < 10; i++) {
+            visitas.add(new Visita());
+        }
+
+        //GestorFicheros.escribirFicheroBinario(GestorFicheros.FICHERO_BINARIO, this);
         GestorFicheros.escribirFicheroTexto(GestorFicheros.FICHERO, personal, pacientes);
-        
     }
 
     public void consultaHospital() {
@@ -51,6 +63,11 @@ public class Hospital implements Serializable {
         for (int i = 0; i < pacientes.size(); i++) {
             System.out.println(iterator.next().toStringFichero());
         }
+
+        for (int i = 0; i < visitas.size(); i++) {
+            System.out.println(visitas.get(i).toStringFichero());
+        }
+
     }
 
     public void consultaMedicos() {
@@ -165,7 +182,7 @@ public class Hospital implements Serializable {
         }
         sc.close();
     }
-    
+
     public void actualizarPaciente() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Dime el ID del paciente");
@@ -191,6 +208,5 @@ public class Hospital implements Serializable {
         }
         sc.close();
     }
-
 
 }
