@@ -5,9 +5,8 @@
  */
 package hospital;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Random;
+import java.time.LocalDate;
+
 
 /**
  *
@@ -16,27 +15,25 @@ import java.util.Random;
 public class Visita{
 
     protected int identificador;
-    protected Fecha fecha;
+    protected LocalDate fecha;
     protected int idMedico;
     protected int idPaciente;
-    protected int contador;
-    protected static int autonumerico;
+    protected static int contador;
 
-    public Visita(){
-        autonumerico++;
-        contador = autonumerico;
-        fecha = new Fecha();
+
+    public Visita(int idMedico, int idPaciente) {
+        contador++;
+        fecha=LocalDate.of((int)(Math.random()*(2021-2000)+2000),(int)(Math.random()*(12-1)+1),(int)(Math.random()*(30-1)+1));
         identificador = contador;
-        this.medico = medico;
-        this.paciente = paciente;
-        
+        this.idMedico = idMedico;
+        this.idPaciente = idPaciente;
     }
 
-    public Visita(int identificador, Fecha fecha, Medico medico, Paciente paciente) {
+    public Visita(int identificador, int idMedico, int idPaciente) {
+        fecha=LocalDate.now();
         this.identificador = identificador;
-        this.fecha = fecha;
-        this.medico = medico;
-        this.paciente = paciente;
+        this.idMedico = idMedico;
+        this.idPaciente = idPaciente;
     }
 
     public int getIdentificador() {
@@ -47,37 +44,45 @@ public class Visita{
         this.identificador = identificador;
     }
 
-    public Fecha getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(Fecha fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
-    public Medico getMedico() {
-        return medico;
+    public int getIdMedico() {
+        return idMedico;
     }
 
-    public void setMedico(Medico medico) {
-        this.medico = medico;
+    public void setIdMedico(int idMedico) {
+        this.idMedico = idMedico;
     }
 
-    public Paciente getPaciente() {
-        return paciente;
+    public int getIdPaciente() {
+        return idPaciente;
     }
 
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
+    public void setIdPaciente(int idPaciente) {
+        this.idPaciente = idPaciente;
     }
 
     @Override
     public String toString() {
-        return "Visita{" + "identificador=" + identificador + ", fecha=" + fecha + ", medico=" + medico + ", paciente=" + paciente + '}';
+        return "Visita{" + "identificador=" + identificador + ", fecha=" + fecha + ", idMedico=" + idMedico + ", idPaciente=" + idPaciente + '}';
     }
-
+    
     public String toStringFichero() {
-        return identificador + ";" + fecha.toStringFichero() + ";" + medico.ID + ";" + paciente.ID;
+        return  identificador + ";" + fecha + ";" + idMedico + ";" + idPaciente;
     }
+    
+    
+    
+    
+
+   
+    
+   
 
 }
