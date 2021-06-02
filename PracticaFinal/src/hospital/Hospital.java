@@ -12,7 +12,7 @@ import java.util.Scanner;
 import java.util.TreeSet;
 
 /**
- *
+ * Clase en la que se crea una serie de colecciones de Perosnal, Pacientes y Visitas
  * @author cesar
  */
 public class Hospital implements Serializable {
@@ -55,18 +55,28 @@ public class Hospital implements Serializable {
 
     }
 
+    /**
+     * Devuelve un ID aleatorio de la colección de médicos
+     * @return
+     */
     public int randomMedico() {
-
         return personal.get((int) (Math.random() * personal.size())).ID;
 
     }
 
+    /**
+     * Devuelve un ID aleatorio de la colección de pacientes
+     * @return
+     */
     public int randomPaciente() {
         ArrayList<Paciente> alternativoPacientes = new ArrayList(pacientes);
         return alternativoPacientes.get((int) (Math.random() * alternativoPacientes.size())).ID;
 
     }
 
+    /**
+     * Devuelve el listado de médicos, enfermeros, administradores, visitas y pacientes 
+     */
     public void consultaHospital() {
         System.out.println("Médicos");
         consultaMedicos();
@@ -84,6 +94,9 @@ public class Hospital implements Serializable {
         consultaPacientes();
     }
 
+    /**
+     * Método para listar todos los médicos de la colección
+     */
     public void consultaMedicos() {
         for (int i = 0; i < personal.size(); i++) {
             if (personal.get(i).getNombre().contains("Medico")) {
@@ -93,6 +106,9 @@ public class Hospital implements Serializable {
         }
     }
 
+    /**
+     *Método para listar todos los enfermeros de la colección
+     */
     public void consultaEnfermeros() {
         for (int i = 0; i < personal.size(); i++) {
             if (personal.get(i).getNombre().contains("Enfermero")) {
@@ -102,6 +118,9 @@ public class Hospital implements Serializable {
         }
     }
 
+    /**
+     *Método para listar todos los administradores de la colección
+     */
     public void consultaAdministradores() {
         for (int i = 0; i < personal.size(); i++) {
             if (personal.get(i).getNombre().contains("Administrador")) {
@@ -111,6 +130,9 @@ public class Hospital implements Serializable {
         }
     }
 
+    /**
+     * Método para listar todas las visitas de la colección
+     */
     public void consultaVisitas() {
         for (int i = 0; i < visitas.size(); i++) {
             System.out.println(visitas.get(i).toStringFichero());
@@ -118,6 +140,10 @@ public class Hospital implements Serializable {
 
     }
 
+    /**
+     * Método que recibe como entrada un ArrayList de paciente y sirve para poder listarlos
+     * @param listaPacientes
+     */
     public void consultaPacienteArray(ArrayList<Paciente> listaPacientes) {
         for (int i = 0; i < listaPacientes.size(); i++) {
             System.out.println(listaPacientes.get(i).toStringFichero());
@@ -125,6 +151,9 @@ public class Hospital implements Serializable {
 
     }
 
+    /**
+     * Método para listar todos los pacientes de la colección
+     */
     public void consultaPacientes() {
         iterator = pacientes.iterator();
         for (int i = 0; i < pacientes.size(); i++) {
@@ -132,6 +161,9 @@ public class Hospital implements Serializable {
         }
     }
 
+    /**
+     * Método para añadir médico con todos sus parámetros
+     */
     public void anadirMedico() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce edad");
@@ -158,6 +190,9 @@ public class Hospital implements Serializable {
         sc.close();
     }
 
+    /**
+     * Método para añadir paciente con todos sus parámetros
+     */
     public void anadirPaciente() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce edad");
@@ -182,6 +217,9 @@ public class Hospital implements Serializable {
         sc.close();
     }
 
+    /**
+     * Dado un ID, consultar cual es el médico
+     */
     public void consultaDeMedicosID() {
         Scanner sc = new Scanner(System.in);
         boolean stop = false;
@@ -199,6 +237,9 @@ public class Hospital implements Serializable {
         }
     }
 
+    /**
+     * Método para actualizar un médico dado un ID
+     */
     public void actualizarMedico() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Dime el ID del médico");
@@ -230,6 +271,9 @@ public class Hospital implements Serializable {
         sc.close();
     }
 
+    /**
+     *  Método para actualizar un paciente dado un ID
+     */
     public void actualizarPaciente() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Dime el ID del paciente");
@@ -258,7 +302,10 @@ public class Hospital implements Serializable {
         sc.close();
     }
 
-    public void añadirVisita() {
+    /**
+     * Método para añadir una visita
+     */
+    public void anadirVisita() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Dime el ID de la visita");
         int ID = sc.nextInt();
@@ -271,6 +318,9 @@ public class Hospital implements Serializable {
         visitas.add(v);
     }
 
+    /**
+     * Dado un ID, siempre que sea paciente se elimina
+     */
     public void eliminarPacientePorID() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Dime el ID del paciente");
@@ -286,6 +336,9 @@ public class Hospital implements Serializable {
         }
     }
 
+    /**
+     * Dado un ID siempre que sea médico se elimina
+     */
     public void eliminarMedicoPorID() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Dime el ID del médico");
@@ -300,6 +353,9 @@ public class Hospital implements Serializable {
         }
     }
 
+    /**
+     * Dado un departamento, si este coincide se le pide el ID para eliminar al médico
+     */
     public void eliminarMedicosPorDepartamentoEiD() {
         Scanner sc = new Scanner(System.in);
         String departamento = null;
@@ -322,6 +378,11 @@ public class Hospital implements Serializable {
         }
     }
 
+    /**
+     * Método que lanza una excepción personalizada
+     * @param tipo
+     * @throws departamentoIncorrecto
+     */
     public void comprobarDepartamento(String tipo) throws departamentoIncorrecto {
         if (!tipo.equalsIgnoreCase("Cardiología") || !tipo.equalsIgnoreCase("Neurología") || !tipo.equalsIgnoreCase("Inmunología") || !tipo.equalsIgnoreCase("Hematología") || !tipo.equalsIgnoreCase("Pediatría")) {
             throw new departamentoIncorrecto();

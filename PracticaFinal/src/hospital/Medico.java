@@ -6,7 +6,8 @@
 package hospital;
 
 /**
- *
+ * Clase Médico que hereda de Personal
+ * En ella se crea un constructor con parámetros aleatorios
  * @author cesar
  */
 public class Medico extends Personal {

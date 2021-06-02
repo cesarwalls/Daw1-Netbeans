@@ -133,7 +133,7 @@ public class Tester {
                             hospital.actualizarPaciente();
                             break;
                         case 14:
-                            hospital.añadirVisita();
+                            hospital.anadirVisita();
                             break;
                         case 15:
                             hospital.consultaAdministradores();

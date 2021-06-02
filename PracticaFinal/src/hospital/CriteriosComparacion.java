@@ -8,7 +8,7 @@ package hospital;
 import java.util.Comparator;
 
 /**
- *
+ * Clase en el que se incluyen los criterios de comparación para los ArrayList
  * @author cesar
  */
 public class CriteriosComparacion {

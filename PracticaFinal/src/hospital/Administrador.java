@@ -6,7 +6,8 @@
 package hospital;
 
 /**
- *
+ * Clase Administrador que hereda de Personal
+ * En ella se crea un constructor con parámetros aleatorios
  * @author cesar
  */
 public class Administrador extends Personal {
@@ -47,6 +48,10 @@ public class Administrador extends Personal {
         return "Administrador{" + "posicion=" + posicion + '}';
     }
 
+    /**
+     * Devuelve el string de manera que pueda luego introducirlo en el fichero
+     * @return
+     */
     @Override
     public String toStringFichero() {
         return super.toStringFichero() + ";" + posicion;

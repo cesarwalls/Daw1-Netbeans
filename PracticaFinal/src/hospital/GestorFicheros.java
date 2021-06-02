@@ -24,7 +24,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * Clase en la que se crean los métodos para crear ficheros, para volcar contenido en ficheros de texto y binarios
+ * y para cargar contenido de ficheros de texto y binarios
  * @author cesar
  */
 public class GestorFicheros {
