@@ -43,10 +43,12 @@ public class GestorFicheros {
             for (int i = 0; i < listaVuelos.size(); i++) {
                   pw.println(listaVuelos.get(i).toStringFichero());
             }
+            pw.close();
           
         } catch (FileNotFoundException ex) {
             Logger.getLogger(GestorFicheros.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
 
     }
 
