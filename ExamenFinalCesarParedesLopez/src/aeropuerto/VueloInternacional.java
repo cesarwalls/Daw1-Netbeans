@@ -119,5 +119,10 @@ public class VueloInternacional extends Vuelo {
     public String toStringFichero() {
         return super.toStringFichero() + ";" + escala + ";" + numEscalas + ";" + listaPaises;
     }
+    
+    public String toStringListaPaises(){
+        listaPaises.spliterator();
+        return null;
+    }
 
 }
