@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="DESKTOP-7NKI8LU" name="descuentosTest" skipped="0" tests="3" time="0.201" timestamp="2021-06-03T17:14:41">
+<testsuite errors="0" failures="0" hostname="DESKTOP-7NKI8LU" name="descuentosTest" skipped="0" tests="3" time="0.068" timestamp="2021-06-04T12:29:39">
   <properties>
     <property name="libs.spring-framework300.classpath" value="C:\Program Files\NetBeans-12.0\netbeans\platform\modules\org-apache-commons-logging.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\cglib-2.2.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-aop-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-aspects-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-beans-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-context-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-context-support-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-core-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-expression-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-instrument-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-instrument-tomcat-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-jdbc-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-jms-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-orm-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-oxm-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-struts-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-test-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-tx-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-web-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-webmvc-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\spring-3.0\spring-webmvc-portlet-3.2.18.RELEASE.jar" />
     <property name="javac.test.classpath" value=":build/classes:C:\Program Files\NetBeans-12.0\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:C:\Program Files\NetBeans-12.0\netbeans\platform\modules\ext\junit-4.12.jar" />
@@ -17,13 +17,13 @@
     <property name="libs.jsp-compilation.src" value="" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner descuentosTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\cesar\Documents\NetBeansProjects\descuentosTester\build\test\results\TEST-descuentosTest.xml crashfile=C:\Users\cesar\Documents\NetBeansProjects\descuentosTester\build\junitvmwatcher10555562449535175667.properties propsfile=C:\Users\cesar\Documents\NetBeansProjects\descuentosTester\build\junit6917279989729018124.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner descuentosTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\cesar\Documents\GitHub\Daw1-Netbeans\descuentosTester\build\test\results\TEST-descuentosTest.xml crashfile=C:\Users\cesar\Documents\GitHub\Daw1-Netbeans\descuentosTester\build\junitvmwatcher11548427233039982428.properties propsfile=C:\Users\cesar\Documents\GitHub\Daw1-Netbeans\descuentosTester\build\junit14238504511772700801.properties" />
     <property name="jdk.debug" value="release" />
     <property name="libs.spring-framework300.src" value="" />
     <property name="javadoc.use" value="true" />
     <property name="libs.javac-api.maven-pom" value="" />
     <property name="javadoc.notree" value="false" />
-    <property name="basedir" value="C:\Users\cesar\Documents\NetBeansProjects\descuentosTester" />
+    <property name="basedir" value="C:\Users\cesar\Documents\GitHub\Daw1-Netbeans\descuentosTester" />
     <property name="java.vm.specification.vendor" value="Oracle Corporation" />
     <property name="java.specification.name" value="Java Platform API Specification" />
     <property name="libs.javac-api.javadoc" value="" />
@@ -40,7 +40,7 @@
     <property name="sun.java2d.noddraw" value="true" />
     <property name="sun.zip.disableMemoryMapping" value="true" />
     <property name="libs.maven-dependencies.maven-pom" value="" />
-    <property name="jnidispatch.path" value="C:\Users\cesar\AppData\Local\Temp\jna-94551106\jna5738013330008751260.dll" />
+    <property name="jnidispatch.path" value="C:\Users\cesar\AppData\Local\Temp\jna-94551106\jna16326042828058958237.dll" />
     <property name="libs.primefaces.javadoc" value="" />
     <property name="libs.jsp-compilation.javadoc" value="" />
     <property name="libs.jsf12.src" value="" />
@@ -164,7 +164,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="libs.restapi.javadoc" value="" />
     <property name="libs.jpa20-persistence.src" value="" />
-    <property name="javac.test.sourcepath" value="C:\Users\cesar\Documents\NetBeansProjects\descuentosTester\build\empty" />
+    <property name="javac.test.sourcepath" value="C:\Users\cesar\Documents\GitHub\Daw1-Netbeans\descuentosTester\build\empty" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="includes" value="**" />
     <property name="libs.jsf12.javadoc" value="C:\Program Files\NetBeans-12.0\netbeans\enterprise\docs\javaee-doc-api.jar" />
@@ -209,7 +209,7 @@
     <property name="javac.source" value="15" />
     <property name="java.version.date" value="2021-01-19" />
     <property name="java.home" value="C:\Program Files\Java\jdk-15.0.2" />
-    <property name="work.dir" value="C:\Users\cesar\Documents\NetBeansProjects\descuentosTester" />
+    <property name="work.dir" value="C:\Users\cesar\Documents\GitHub\Daw1-Netbeans\descuentosTester" />
     <property name="jna.boot.library.name" value="jnidispatch-nb" />
     <property name="javac.test.compilerargs" value="" />
     <property name="libs.PostgreSQLDriver.classpath" value="C:\Program Files\NetBeans-12.0\netbeans\ide\modules\ext\postgresql-42.2.10.jar" />
@@ -232,7 +232,7 @@
     <property name="libs.absolutelayout.classpath" value="C:\Program Files\NetBeans-12.0\netbeans\java\modules\ext\AbsoluteLayout.jar" />
     <property name="do.archive" value="true" />
     <property name="libs.struts.maven-pom" value="" />
-    <property name="built-jar.properties" value="C:\Users\cesar\Documents\NetBeansProjects\descuentosTester\build\built-jar.properties" />
+    <property name="built-jar.properties" value="C:\Users\cesar\Documents\GitHub\Daw1-Netbeans\descuentosTester\build\built-jar.properties" />
     <property name="nb.native.filechooser" value="false" />
     <property name="libs.testng.src" value="" />
     <property name="platform.active" value="default_platform" />
@@ -266,7 +266,7 @@
     <property name="apple.awt.graphics.UseQuartz" value="true" />
     <property name="run.jvmargs" value="" />
     <property name="libs.primefaces.src" value="" />
-    <property name="ant.file" value="C:\Users\cesar\Documents\NetBeansProjects\descuentosTester\build.xml" />
+    <property name="ant.file" value="C:\Users\cesar\Documents\GitHub\Daw1-Netbeans\descuentosTester\build.xml" />
     <property name="libs.struts.src" value="" />
     <property name="path.separator" value=";" />
     <property name="libs.JAXB-ENDORSED.classpath" value="C:\Program Files\NetBeans-12.0\netbeans\ide\modules\ext\jaxb\api\jaxb-api.jar" />
@@ -301,7 +301,7 @@
     <property name="libs.jsf20.javadoc" value="C:\Program Files\NetBeans-12.0\netbeans\enterprise\docs\javaee-doc-api.jar" />
     <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
     <property name="netbeans.autoupdate.version" value="1.23" />
-    <property name="empty.dir" value="C:\Users\cesar\Documents\NetBeansProjects\descuentosTester\build\empty" />
+    <property name="empty.dir" value="C:\Users\cesar\Documents\GitHub\Daw1-Netbeans\descuentosTester\build\empty" />
     <property name="netbeans.user" value="C:\Users\cesar\AppData\Roaming\NetBeans\12.0" />
     <property name="file.separator" value="\" />
     <property name="line.separator" value="&#xd;&#xa;" />
@@ -318,7 +318,7 @@
     <property name="javadoc.windowtitle" value="" />
     <property name="nb.internal.action.name" value="test" />
     <property name="libs.javaee-api-8.0.maven-pom" value="" />
-    <property name="ant.file.descuentosTester" value="C:\Users\cesar\Documents\NetBeansProjects\descuentosTester\build.xml" />
+    <property name="ant.file.descuentosTester" value="C:\Users\cesar\Documents\GitHub\Daw1-Netbeans\descuentosTester\build.xml" />
     <property name="libs.jaxws21.src" value="" />
     <property name="libs.maven-dependencies.classpath" value="C:\Program Files\NetBeans-12.0\netbeans\enterprise\modules\ext\javaee6-endorsed\javax.annotation.jar;C:\Program Files\NetBeans-12.0\netbeans\enterprise\modules\ext\javaee6-endorsed\jaxb-api-osgi.jar;C:\Program Files\NetBeans-12.0\netbeans\enterprise\modules\ext\javaee6-endorsed\webservices-api-osgi.jar" />
     <property name="jna.loaded" value="true" />
@@ -342,7 +342,7 @@
     <property name="libs.javaee-api-6.0.src" value="" />
     <property name="user.properties.file" value="C:\Users\cesar\AppData\Roaming\NetBeans\12.0\build.properties" />
     <property name="netbeans.autoupdate.country" value="US" />
-    <property name="java.class.path" value="C:\Users\cesar\Documents\NetBeansProjects\descuentosTester\build\classes;C:\Program Files\NetBeans-12.0\netbeans\platform\modules\ext\hamcrest-core-1.3.jar;C:\Program Files\NetBeans-12.0\netbeans\platform\modules\ext\junit-4.12.jar;C:\Users\cesar\Documents\NetBeansProjects\descuentosTester\build\test\classes;C:\Program Files\NetBeans-12.0\netbeans\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans-12.0\netbeans\extide\ant\lib\ant.jar;C:\Program Files\NetBeans-12.0\netbeans\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans-12.0\netbeans\extide\ant\lib\ant-junit4.jar" />
+    <property name="java.class.path" value="C:\Users\cesar\Documents\GitHub\Daw1-Netbeans\descuentosTester\build\classes;C:\Program Files\NetBeans-12.0\netbeans\platform\modules\ext\hamcrest-core-1.3.jar;C:\Program Files\NetBeans-12.0\netbeans\platform\modules\ext\junit-4.12.jar;C:\Users\cesar\Documents\GitHub\Daw1-Netbeans\descuentosTester\build\test\classes;C:\Program Files\NetBeans-12.0\netbeans\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans-12.0\netbeans\extide\ant\lib\ant.jar;C:\Program Files\NetBeans-12.0\netbeans\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans-12.0\netbeans\extide\ant\lib\ant-junit4.jar" />
     <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="ap.supported.internal" value="true" />
@@ -381,7 +381,7 @@
     <property name="libs.PostgreSQLDriver.src" value="" />
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/" />
     <property name="annotation.processing.source.output" value="build/generated-sources/ap-source-output" />
-    <property name="user.dir" value="C:\Users\cesar\Documents\NetBeansProjects\descuentosTester" />
+    <property name="user.dir" value="C:\Users\cesar\Documents\GitHub\Daw1-Netbeans\descuentosTester" />
     <property name="platform.java" value="C:\Program Files\Java\jdk-15.0.2/bin/java" />
     <property name="application.args" value="" />
     <property name="org.xml.sax.driver" value="com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser" />
@@ -393,18 +393,11 @@
     <property name="annotation.processing.run.all.processors" value="true" />
     <property name="junit.forkmode" value="perTest" />
     <property name="libs.javaee-web-api-7.0.src" value="" />
-    <property name="ant.file.descuentosTester-impl" value="C:\Users\cesar\Documents\NetBeansProjects\descuentosTester\nbproject\build-impl.xml" />
+    <property name="ant.file.descuentosTester-impl" value="C:\Users\cesar\Documents\GitHub\Daw1-Netbeans\descuentosTester\nbproject\build-impl.xml" />
   </properties>
-  <testcase classname="descuentosTest" name="testVeinticinco" time="0.004" />
-  <testcase classname="descuentosTest" name="testTrespordos" time="0.001" />
-  <testcase classname="descuentosTest" name="testDiezdescuentoporpiezaigual" time="0.009">
-    <failure message="expected:&lt;120.0&gt; but was:&lt;200.0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;120.0&gt; but was:&lt;200.0&gt;
-	at descuentosTest.testDiezdescuentoporpiezaigual(descuentosTest.java:77)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-</failure>
-  </testcase>
+  <testcase classname="descuentosTest" name="testVeinticinco" time="0.0" />
+  <testcase classname="descuentosTest" name="testTrespordos" time="0.0" />
+  <testcase classname="descuentosTest" name="testDiezdescuentoporpiezaigual" time="0.0" />
   <system-out><![CDATA[veinticinco
 trespordos
 diezdescuentoporpiezaigual

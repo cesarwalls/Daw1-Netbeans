@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author cesar
  */
-public abstract class Personal implements Serializable, Comparable<Personal> {
+public class Personal implements Serializable, Comparable<Personal> {
 
     protected int ID;
     protected int edad;

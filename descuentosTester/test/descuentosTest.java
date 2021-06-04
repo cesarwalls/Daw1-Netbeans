@@ -71,7 +71,7 @@ public class descuentosTest {
     public void testDiezdescuentoporpiezaigual() {
         System.out.println("diezdescuentoporpiezaigual");
         double precio = 50.0;
-        int numPiezas = 4;
+        double numPiezas = 4;
         double expResult = 120.0;
         double result = descuentos.diezdescuentoporpiezaigual(precio, numPiezas);
         assertEquals(expResult, result, 0.0);

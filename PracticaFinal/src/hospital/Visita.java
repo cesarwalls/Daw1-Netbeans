@@ -5,6 +5,7 @@
  */
 package hospital;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 
@@ -12,7 +13,7 @@ import java.time.LocalDate;
  *
  * @author cesar
  */
-public class Visita{
+public class Visita implements Serializable{
 
     protected int identificador;
     protected LocalDate fecha;

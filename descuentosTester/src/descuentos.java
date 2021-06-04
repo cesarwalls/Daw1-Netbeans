@@ -34,8 +34,10 @@ public class descuentos {
         return trespordos;
     }
 
-    public static double diezdescuentoporpiezaigual(double precio, int numPiezas) {
-        precio = ((precio * numPiezas) - ((numPiezas / 10) * precio));
-        return precio;
+    public static double diezdescuentoporpiezaigual(double precio, double numPiezas) {
+        double precioGrande = precio*numPiezas;
+        double descuento = (numPiezas/10)*precioGrande;
+        double precioTotal = precioGrande - descuento;
+        return precioTotal;
     }
 }

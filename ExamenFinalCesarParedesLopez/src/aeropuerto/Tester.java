@@ -18,6 +18,7 @@ public class Tester {
         Scanner sc = new Scanner(System.in);
         GestorFicheros.crearFicheros();
         Aeropuerto barajas = new Aeropuerto();
+        barajas.listarVuelosTotales();
         System.out.println("Bienvenido al menu");
         int eleccion;
         do {

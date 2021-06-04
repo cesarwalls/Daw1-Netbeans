@@ -1,110 +1,110 @@
-1;65;true;Medico 1;890;Pediatría
-2;82;false;Medico 2;223;Cardiología
-3;42;false;Medico 3;502;Pediatría
-4;68;false;Medico 4;461;Pediatría
-5;41;true;Medico 5;974;Pediatría
-6;12;true;Medico 6;395;Inmunología
-7;22;false;Medico 7;115;Inmunología
-8;25;true;Medico 8;720;Inmunología
-9;88;true;Medico 9;462;Pediatría
-10;83;true;Medico 10;558;Pediatría
-11;29;true;Medico 11;237;Pediatría
-12;81;false;Medico 12;339;Neurología
-13;67;true;Medico 13;680;Cardiología
-14;37;false;Medico 14;401;Neurología
-15;58;true;Medico 15;976;Neurología
-16;72;true;Medico 16;596;Neurología
-17;37;true;Medico 17;197;Cardiología
-18;19;true;Medico 18;490;Pediatría
-19;16;false;Medico 19;959;Cardiología
-20;11;true;Medico 20;964;Neurología
-21;91;false;Medico 21;733;Neurología
-22;94;true;Medico 22;283;Pediatría
-23;94;true;Medico 23;3;Pediatría
-24;47;false;Medico 24;954;Inmunología
-25;3;true;Medico 25;713;Inmunología
-26;79;false;Medico 26;936;Neurología
-27;97;false;Medico 27;693;Cardiología
-28;83;false;Medico 28;10;Inmunología
-29;31;true;Medico 29;999;Pediatría
-30;37;false;Medico 30;398;Pediatría
-31;40;false;Medico 31;376;Pediatría
-32;78;true;Medico 32;922;Pediatría
-33;31;true;Medico 33;264;Pediatría
-34;10;false;Enfermero 34;Título Universitario;2
-35;89;true;Enfermero 35;Grado Superior;1
-36;4;false;Enfermero 36;Grado Superior;2
-37;34;true;Enfermero 37;Grado Superior;3
-38;11;false;Enfermero 38;Grado Medio;1
-39;86;false;Enfermero 39;Grado Superior;4
-40;94;false;Enfermero 40;Grado Medio;3
-41;31;false;Enfermero 41;Título Universitario;3
-42;47;true;Enfermero 42;Grado Medio;5
-43;4;false;Enfermero 43;Grado Superior;3
-44;52;false;Enfermero 44;Grado Superior;4
-45;12;true;Enfermero 45;Título Universitario;3
-46;11;true;Enfermero 46;Grado Superior;5
-47;88;false;Enfermero 47;Título Universitario;3
-48;38;false;Enfermero 48;Grado Superior;4
-49;25;false;Enfermero 49;Grado Medio;1
-50;93;false;Enfermero 50;Título Universitario;4
-51;41;true;Enfermero 51;Título Universitario;5
-52;19;false;Enfermero 52;Grado Medio;5
-53;87;true;Enfermero 53;Título Universitario;5
-54;71;false;Enfermero 54;Grado Superior;3
-55;77;false;Enfermero 55;Grado Superior;3
-56;6;true;Enfermero 56;Título Universitario;5
-57;11;false;Enfermero 57;Grado Superior;3
-58;15;false;Enfermero 58;Grado Medio;2
-59;24;true;Enfermero 59;Título Universitario;1
-60;47;false;Enfermero 60;Título Universitario;5
-61;81;false;Enfermero 61;Título Universitario;2
-62;68;false;Enfermero 62;Grado Medio;1
-63;99;true;Enfermero 63;Grado Medio;1
-64;11;true;Enfermero 64;Grado Medio;4
-65;56;true;Enfermero 65;Grado Medio;4
-66;55;true;Enfermero 66;Título Universitario;2
-67;36;true;Enfermero 67;Grado Superior;1
-68;18;false;Enfermero 68;Título Universitario;1
-69;14;true;Enfermero 69;Título Universitario;2
-70;51;true;Enfermero 70;Grado Superior;2
-71;73;false;Enfermero 71;Grado Medio;4
-72;73;true;Enfermero 72;Título Universitario;4
-73;16;true;Enfermero 73;Grado Medio;4
-74;85;true;Enfermero 74;Título Universitario;3
-75;2;false;Enfermero 75;Grado Superior;3
-76;45;true;Enfermero 76;Grado Superior;2
-77;34;true;Enfermero 77;Grado Medio;1
-78;6;true;Enfermero 78;Grado Medio;5
-79;77;true;Enfermero 79;Grado Medio;5
-80;36;true;Enfermero 80;Grado Medio;2
-81;73;false;Enfermero 81;Grado Superior;3
-82;75;false;Enfermero 82;Título Universitario;3
-83;82;false;Enfermero 83;Grado Superior;1
-84;7;false;Enfermero 84;Título Universitario;4
-85;75;false;Enfermero 85;Grado Superior;4
-86;34;true;Enfermero 86;Grado Medio;5
-87;61;true;Enfermero 87;Título Universitario;4
-88;97;false;Enfermero 88;Grado Medio;1
-89;9;false;Enfermero 89;Grado Medio;3
-90;85;true;Administrador 90;becario
-91;13;true;Administrador 91;becario
-92;10;false;Administrador 92;Titular
-93;66;true;Administrador 93;becario
-94;37;true;Administrador 94;Titular
-95;31;false;Administrador 95;Titular
-96;96;false;Administrador 96;becario
-97;80;true;Administrador 97;Jefe
-98;85;true;Administrador 98;becario
-99;50;false;Administrador 99;becario
-100;35;true;Administrador 100;Titular
-1;42;true;Paciente 1;12
-10;88;true;Paciente 10;27
-2;85;false;Paciente 2;12
-3;52;true;Paciente 3;26
-4;59;true;Paciente 4;14
-5;74;true;Paciente 5;10
-6;67;false;Paciente 6;24
-7;31;false;Paciente 7;19
-8;14;false;Paciente 8;26
-9;46;false;Paciente 9;14
+1;85;false;Medico 1;846;Neurología
+2;53;true;Medico 2;677;Pediatría
+3;54;true;Medico 3;188;Pediatría
+4;67;false;Medico 4;682;Pediatría
+5;63;false;Medico 5;241;Neurología
+6;62;true;Medico 6;966;Pediatría
+7;62;false;Medico 7;788;Pediatría
+8;32;false;Medico 8;396;Inmunología
+9;10;false;Medico 9;168;Cardiología
+10;86;false;Medico 10;315;Cardiología
+11;21;true;Medico 11;872;Pediatría
+12;61;false;Medico 12;535;Cardiología
+13;28;false;Medico 13;838;Pediatría
+14;51;false;Medico 14;610;Cardiología
+15;32;false;Medico 15;170;Neurología
+16;55;false;Medico 16;265;Pediatría
+17;45;false;Medico 17;314;Pediatría
+18;43;false;Medico 18;130;Neurología
+19;36;true;Medico 19;933;Neurología
+20;65;true;Medico 20;124;Inmunología
+21;19;true;Medico 21;976;Pediatría
+22;72;false;Medico 22;155;Pediatría
+23;74;true;Medico 23;711;Inmunología
+24;18;true;Medico 24;987;Cardiología
+25;64;true;Medico 25;715;Pediatría
+26;59;true;Medico 26;414;Cardiología
+27;95;false;Medico 27;83;Neurología
+28;80;true;Medico 28;126;Neurología
+29;47;true;Medico 29;348;Inmunología
+30;98;true;Medico 30;881;Pediatría
+31;47;false;Medico 31;879;Inmunología
+32;37;false;Medico 32;873;Inmunología
+33;89;false;Medico 33;753;Pediatría
+34;60;false;Enfermero 34;Título Universitario;3
+35;7;true;Enfermero 35;Grado Medio;2
+36;20;false;Enfermero 36;Título Universitario;2
+37;47;false;Enfermero 37;Grado Medio;2
+38;55;true;Enfermero 38;Grado Medio;5
+39;17;false;Enfermero 39;Título Universitario;5
+40;35;false;Enfermero 40;Grado Medio;5
+41;97;false;Enfermero 41;Grado Superior;3
+42;45;false;Enfermero 42;Grado Medio;3
+43;42;false;Enfermero 43;Grado Medio;3
+44;54;false;Enfermero 44;Grado Medio;3
+45;99;true;Enfermero 45;Grado Superior;3
+46;17;true;Enfermero 46;Grado Medio;5
+47;36;false;Enfermero 47;Grado Superior;1
+48;95;true;Enfermero 48;Título Universitario;4
+49;58;false;Enfermero 49;Grado Superior;2
+50;96;false;Enfermero 50;Título Universitario;3
+51;33;true;Enfermero 51;Título Universitario;4
+52;73;false;Enfermero 52;Título Universitario;1
+53;73;false;Enfermero 53;Grado Superior;3
+54;33;true;Enfermero 54;Grado Medio;4
+55;42;true;Enfermero 55;Título Universitario;2
+56;39;false;Enfermero 56;Título Universitario;2
+57;83;false;Enfermero 57;Grado Superior;5
+58;16;false;Enfermero 58;Título Universitario;5
+59;78;false;Enfermero 59;Grado Medio;1
+60;80;false;Enfermero 60;Título Universitario;2
+61;94;false;Enfermero 61;Título Universitario;2
+62;69;false;Enfermero 62;Grado Superior;4
+63;81;false;Enfermero 63;Título Universitario;4
+64;27;true;Enfermero 64;Título Universitario;4
+65;11;true;Enfermero 65;Título Universitario;4
+66;77;true;Enfermero 66;Título Universitario;5
+67;83;false;Enfermero 67;Grado Medio;4
+68;4;true;Enfermero 68;Título Universitario;4
+69;41;true;Enfermero 69;Grado Medio;3
+70;84;true;Enfermero 70;Título Universitario;5
+71;59;true;Enfermero 71;Título Universitario;1
+72;91;false;Enfermero 72;Título Universitario;2
+73;13;false;Enfermero 73;Grado Superior;1
+74;24;true;Enfermero 74;Título Universitario;5
+75;24;true;Enfermero 75;Grado Superior;1
+76;40;false;Enfermero 76;Grado Superior;2
+77;60;true;Enfermero 77;Grado Superior;3
+78;27;true;Enfermero 78;Título Universitario;2
+79;18;false;Enfermero 79;Título Universitario;3
+80;86;true;Enfermero 80;Grado Medio;3
+81;23;true;Enfermero 81;Grado Medio;2
+82;62;true;Enfermero 82;Título Universitario;1
+83;33;true;Enfermero 83;Título Universitario;5
+84;21;false;Enfermero 84;Grado Medio;4
+85;13;true;Enfermero 85;Título Universitario;5
+86;51;true;Enfermero 86;Título Universitario;2
+87;33;true;Enfermero 87;Título Universitario;5
+88;66;false;Enfermero 88;Título Universitario;1
+89;97;true;Enfermero 89;Grado Medio;5
+90;10;false;Administrador 90;becario
+91;85;true;Administrador 91;Jefe
+92;68;true;Administrador 92;Jefe
+93;60;false;Administrador 93;Titular
+94;45;false;Administrador 94;becario
+95;83;true;Administrador 95;becario
+96;67;false;Administrador 96;Titular
+97;33;false;Administrador 97;Jefe
+98;91;true;Administrador 98;Jefe
+99;98;true;Administrador 99;becario
+100;27;false;Administrador 100;becario
+1;4;false;Paciente 1;22
+10;73;false;Paciente 10;23
+2;68;true;Paciente 2;21
+3;91;false;Paciente 3;23
+4;29;true;Paciente 4;4
+5;29;true;Paciente 5;22
+6;36;false;Paciente 6;7
+7;65;true;Paciente 7;28
+8;86;false;Paciente 8;29
+9;71;true;Paciente 9;14
