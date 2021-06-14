@@ -38,21 +38,17 @@ public class GestorFicheros {
 
                 f.createNewFile();
             }
-        
-        if (!f2.exists()) {
-            f2.createNewFile();
+
+            if (!f2.exists()) {
+                f2.createNewFile();
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(GestorFicheros.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-    catch (IOException ex
 
-    
-        ) {
-                Logger.getLogger(GestorFicheros.class.getName()).log(Level.SEVERE, null, ex);
     }
 
-}
-
-public static void escribirFicheroPW(String fichero, ArrayList<Individuo> lista) {
+    public static void escribirFicheroPW(String fichero, ArrayList<Individuo> lista) {
         try {
             PrintWriter pw = new PrintWriter(fichero);
             for (int i = 0; i < lista.size(); i++) {
@@ -60,17 +56,10 @@ public static void escribirFicheroPW(String fichero, ArrayList<Individuo> lista)
             }
             pw.close();
         } catch (IOException ex) {
-            Logger.getLogger(GestorFicheros
-
-
-
-.class  
-
-
-.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(GestorFicheros.class
+                    .getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
 
     public static ArrayList<Individuo> leerFichero(String fichero) {
         System.out.println("leyedo fichero....");
@@ -90,12 +79,8 @@ public static void escribirFicheroPW(String fichero, ArrayList<Individuo> lista)
             lf.close();
 
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(GestorFicheros
-
-.class  
-
-
-.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(GestorFicheros.class
+                    .getName()).log(Level.SEVERE, null, ex);
         }
         return lista;
     }
